@@ -1,19 +1,8 @@
 
 
 const ReportPatientDetails = (props) => {
-    const data = {"patient_details": {
-        "name": "Mr. Milind Maruti Pingale",
-        "age": "46.5 years",
-        "sex": "Male",
-        "PID_NO": "P2292200001557",
-        "address": "Baner, Pune City",
-        "tel_no": "9969112302",
-        "PIN_no": "411045",
-        "VID": "220229000002130",
-        "collected_on": "03/09/2022 4:05PM",
-        "registered_on": "03/09/2022 04:03 PM",
-        "reported_on": "03/09/2022 07:17 PM"
-      }}
+    const data = {patient_details :props.data};
+    console.log(data);
     return(
         <div>
             <div className="card" style={{ margin: "10px" }}>

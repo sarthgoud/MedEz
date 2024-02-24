@@ -12,6 +12,14 @@ const ReportPage = () => {
 
     const { state } = useLocation();
     console.log(state);
+    const abnormal = state.abnormal_parameters;
+    console.log("ab",abnormal);
+    const patient_details = state.patient_details;
+    const summary = state.summary;
+
+
+
+
     // const location = useLocation();
     // const {res} = location.state;
     // console.log("Inside Report Page",res);
@@ -70,11 +78,12 @@ const ReportPage = () => {
         <div className="mb-3" style={{ marginTop: "10px", marginLeft: "10px"}}>
             <div class="row g-0">
                 <div class="col-md-4">
-                    <ReportPatientDetails/>
+
+                    <ReportPatientDetails data={patient_details}/>
                 </div>
                 <div class="col-md-8">
-                    <ReportReview/>
-                    <ReportAbnormalParameter/>
+                    <ReportReview data = {summary}/>
+                    <ReportAbnormalParameter data={abnormal}/>
                 </div>
             </div>
         </div>
