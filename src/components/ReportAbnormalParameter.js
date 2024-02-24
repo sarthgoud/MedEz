@@ -41,7 +41,8 @@ const ReportAbnormalParameter = (props) => {
                         <tbody>
                             {data.abnormal_parameters.map ((data) => (
                                 <tr className='tableCss'>
-                                <td className='tableCss'>{data.parameter}</td>
+                                <td className='tableCss'>{data.parameter_name
+}</td>
                                 <td className='tableCss'>{data.observed_value}</td>
                                 <td className='tableCss'>{data.unit}</td>
                                 {/* <td className='tableCss'>{data.biological_reference_interval}</td>
