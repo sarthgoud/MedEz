@@ -1,6 +1,6 @@
 import './FileUpload.css'
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { resolvePath, useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Import Axios for making HTTP requests
 function FileUpload() {
   const [file, setFile] = useState(null);
@@ -8,8 +8,19 @@ function FileUpload() {
   const [errorMessage, setErrorMessage] = useState('');
   const [res,setres] = useState('');
   const history = useNavigate();
+  var content = '';
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
+    const reader = new FileReader();
+    
+    reader.readAsDataURL(selectedFile);
+    reader.onload=()=>{
+      var data = reader.result.toString();
+      content = data.split(",")[1];
+      console.log("Selectedfile",content);
+    }
+    
+    
     if (selectedFile && selectedFile.type === 'application/pdf') {
       setFile(selectedFile);
       // Here you can handle the file upload, for example, by submitting it via AJAX
@@ -29,13 +40,11 @@ function FileUpload() {
       // Save the file locally
       saveLocally(selectedFile);
       // Send the file to the backend
-     const response = await axios.post('https://webhook.site/648251ca-d8bd-45ce-83ff-25ed37e1917b', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+     const response = await axios.post('http://localhost:8000/receive_base64',{base64Data:content
       });
-      setres(response.data);
-      console.log('File uploaded successfully:', response.data);
+      const response1= await axios.get('http://localhost:8000/summary');
+      setres(response1.data);
+      console.log('File uploaded successfully:', response1.data);
       setSuccessMessage('File submitted successfully!');
     } catch (error) {
       console.error('Error uploading file:', error);
