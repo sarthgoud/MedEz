@@ -1,4 +1,31 @@
 .tableCss{
-    max-width: 25vh;
-    min-width: 25vh;
+    text-align: center;
+}
+
+.parameter tbody {
+    background-color: white;
+}
+
+.parameter th {
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.parameter td {
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    line-height: 35px;
+}
+
+.parameter thead { 
+    border-bottom: 1px solid #000;
+}
+
+.parameter tr:nth-child(even){background-color: #f2f2f2;}
+
+.parameter tr:hover {background-color: #ddd;}
+
+.parameter th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #417dee;
+  color: white;
 }
