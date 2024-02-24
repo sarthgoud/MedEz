@@ -7,6 +7,7 @@ import { TreatmentModal } from "./TreatmentModal"
 import { useState } from "react"
 import { ReportPatientDetails } from "./ReportPatientDetails"
 import { ReportAbnormalParameter } from "./ReportAbnormalParameter"
+import { ReportNormalParameter } from "./ReporNormalParameter"
 
 const ReportPage = () => {
 
@@ -15,7 +16,8 @@ const ReportPage = () => {
     const abnormal = state.abnormal_parameters;
     console.log("ab",abnormal);
     const patient_details = state.patient_details;
-    const summary = state.summary;
+    const summary = state.overall_summary;
+    const normal = state.normal_parameters
 
 
 
@@ -68,7 +70,7 @@ const ReportPage = () => {
                             <a className="nav-link" href="/testimonials">TESTIMONIALS</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/contactus">CONSTACT US</a>
+                            <a className="nav-link" href="/contactus">CONTACT US</a>
                         </li>
                     </ul>
                 </div>
@@ -77,15 +79,15 @@ const ReportPage = () => {
         <div style={{ marginTop: "50px", backgroundColor: "white", paddingTop: "20px", height: "90%" }}>
         <div className="mb-3" style={{ marginTop: "10px", marginLeft: "10px"}}>
             <div class="row g-0">
-                <div class="col-md-4">
-
+                <div class="col-md-3">
                     <ReportPatientDetails data={patient_details}/>
                 </div>
-                <div class="col-md-8">
-                    <ReportReview data = {summary}/>
-                    <ReportAbnormalParameter data={abnormal}/>
+                <div class="col-md-9">
+                    <ReportReview data = {summary} abnormal={abnormal}/>
                 </div>
             </div>
+            {abnormal.length!=0 && <ReportAbnormalParameter data={abnormal}/>}
+            <ReportNormalParameter data={normal}/>
         </div>
         </div>
         </div>

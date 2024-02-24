@@ -62,7 +62,7 @@ const HomePage = () => {
                     <div class="row g-0">
                         <div class="col-md-5">
                             <div className='reportSection flex-column'>
-                                <label className='reportTitle'>Know Your Medical Report</label>
+                                <label className='reportTitle'>Simplify My Medical Report</label>
                                 {/* <button className='btn btn-primary reportButton' onClick={showButton}>Upload Report Now</button> */}
                                 <FileUpload/>
                             </div>

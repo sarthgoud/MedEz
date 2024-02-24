@@ -5,53 +5,25 @@ const ReportPatientDetails = (props) => {
     console.log(data);
     return(
         <div>
-            <div className="card" style={{ margin: "10px" }}>
+            <div className="card" style={{ margin: "10px"}}>
                 <div className="card-body">
                     <table>
                         <tbody>
                             <tr>
                                 <td>Name:</td>
-                                <td>{data.patient_details.name}</td>
+                                <td>{data.patient_details.name == undefined ? "N/A" : data.patient_details.name}</td>
                             </tr>
                             <tr>
                                 <td>Age:</td>
-                                <td>{data.patient_details.age}</td>
+                                <td>{data.patient_details.age == undefined ? "N/A" : data.patient_details.age}</td>
                             </tr>
                             <tr>
                                 <td>Sex:</td>
-                                <td>{data.patient_details.sex}</td>
+                                <td>{data.patient_details.sex == undefined ? "N/A" : data.patient_details.sex}</td>
                             </tr>
                             <tr>
-                                <td>Phone:</td>
-                                <td>{data.patient_details.tel_no}</td>
-                            </tr>
-                            <tr>
-                                <td>Address:</td>
-                                <td>{data.patient_details.address}</td>
-                            </tr>
-                            <tr>
-                                <td>PID NO:</td>
-                                <td>{data.patient_details.PID_NO}</td>
-                            </tr>
-                            <tr>
-                                <td>PIN No:</td>
-                                <td>{data.patient_details.PIN_no}</td>
-                            </tr>
-                            <tr>
-                                <td>VID:</td>
-                                <td>{data.patient_details.VID}</td>
-                            </tr>
-                            <tr>
-                                <td>Registered Date:</td>
-                                <td>{data.patient_details.registered_on}</td>
-                            </tr>
-                            <tr>
-                                <td>Report Date:</td>
-                                <td>{data.patient_details.reported_on}</td>
-                            </tr>
-                            <tr>
-                                <td>Collected Date:</td>
-                                <td>{data.patient_details.collected_on}</td>
+                                <td>Ref by:</td>
+                                <td>{data.patient_details.ref_by == undefined ? "N/A" : data.patient_details.ref_by}</td>
                             </tr>
                         </tbody>
                     </table>

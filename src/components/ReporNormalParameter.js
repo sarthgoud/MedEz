@@ -1,26 +1,26 @@
 
 import './ReportAbnormalParameter.css'
 
-const ReportAbnormalParameter = (props) => {
-    const data = {"abnormal_parameters":props.data};
-    console.log("abnormal",data);
+const ReportNormalParameter = (props) => {
+    const data = {"normal_parameters":props.data};
+    console.log("normal",data);
     return(
         <div>
             <div className="card" style={{ margin: "10px" }}>
                 <div className="card-body">
-                    <h6 className="card-title text-center" style={{ fontSize: "20px" }}>Abnormal Parameters</h6>
+                    <h6 className="card-title text-center" style={{ fontSize: "20px" }}>Normal Parameters</h6>
                     <table className='parameter'>
-                        <thead className='tablethead'>
+                        <thead>
                             <tr className='tableCss'>
                                 <th>{"Parameter"}</th>
                                 <th>{"Results"}</th>
                                 <th>{"Units"}</th>
-                                <th>{"Reference Range"}</th>
+                                <th style={{ minWidth: "180px" }}>{"Reference Range"}</th>
                                 <th>{"Summary"}</th>
                             </tr>
                         </thead>
-                        <tbody className='tablebody'>
-                            {data.abnormal_parameters.map ((data) => (
+                        <tbody>
+                            {data.normal_parameters.map ((data) => (
                                 <tr className='tableCss'>
                                 <td>{data.parameter_name}</td>
                                 <td>{data.observed_value}</td>
@@ -37,4 +37,4 @@ const ReportAbnormalParameter = (props) => {
     )
 }
 
-export {ReportAbnormalParameter}
+export {ReportNormalParameter}
