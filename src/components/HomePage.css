@@ -1,0 +1,19 @@
+.nav-link.active {
+    color: white;
+}
+
+.reportSection {
+    margin-top: 170px;
+    margin-left: 80px;
+}
+
+.reportTitle{
+    color: black;
+    font-size: 35px;
+    display: block;
+}
+
+.reportButton{
+    margin-top: 10px;
+    margin-left: 120px;
+}

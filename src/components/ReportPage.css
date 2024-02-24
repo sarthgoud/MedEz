@@ -1,0 +1,38 @@
+input {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.uploadImg{
+    width: 70px;
+    height: 60px;
+}
+
+.uploadCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.guideImage{
+    width: 300px;
+    height: 300px;
+}
+
+.feedbackNegativeButton{
+    font-size: 8px;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+.feedbackNegativeText{
+    font-size: 10px;
+    font-weight: bold;
+}
+
