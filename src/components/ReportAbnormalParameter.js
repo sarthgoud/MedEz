@@ -8,7 +8,7 @@ const ReportAbnormalParameter = (props) => {
         <div>
             <div className="card" style={{ margin: "10px" }}>
                 <div className="card-body">
-                    <h6 className="card-title text-center" style={{ fontSize: "20px" }}>Abnormal Parameters</h6>
+                    <h6 className="card-title text-center" style={{ fontSize: "20px" }}>Parameters</h6>
                     <table className='parameter'>
                         <thead className='tablethead'>
                             <tr className='tableCss'>
@@ -23,7 +23,7 @@ const ReportAbnormalParameter = (props) => {
                             {data.abnormal_parameters.map ((data) => (
                                 <tr className='tableCss'>
                                 <td>{data.parameter_name}</td>
-                                <td>{data.observed_value}</td>
+                                <td style={{'fontWeight':'bold'}}>{data.observed_value}</td>
                                 <td>{data.unit}</td>
                                 <td>{data.biological_reference_interval}</td>
                                 <td>{data.summary}</td>

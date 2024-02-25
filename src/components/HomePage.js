@@ -24,6 +24,8 @@ const HomePage = () => {
     });
 
 
+
+
     return (
         <div style={myStyle}>
             <nav className="navbar navbar-expand-lg navbar-dark">
@@ -33,9 +35,9 @@ const HomePage = () => {
                     <span className="navbar-toggler-icon"></span>
                     </button> */}
                     <div id="navbarNav">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav ">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/home">HOME</a>
+                                <a className="nav-link active" aria-current="page" href='/'>HOME</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/services">SERVICES</a>
@@ -46,41 +48,40 @@ const HomePage = () => {
                         </ul>
                     </div>
                     <div className="d-flex">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/testimonials">TESTIMONIALS</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contactus">CONTACT US</a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul className="navbar-nav">
+
+                            <li className="nav-item">
+                                <a className="nav-link" href="/contactus">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
 
-                <div className='mb-3'>
-                    <div class="row g-0">
-                        <div class="col-md-5">
-                            <div className='reportSection flex-column'>
-                                <label className='reportTitle'>Simplify My Medical Report</label>
-                                {/* <button className='btn btn-primary reportButton' onClick={showButton}>Upload Report Now</button> */}
-                                <FileUpload/>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6" style={{ marginTop: "80px" }}>
-                            <ReportGuide />
+            <div className='mb-3'>
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <div className='reportSection flex-column'>
+                            <label className='reportTitle'>Simplify My Medical Report</label>
+                            {/* <button className='btn btn-primary reportButton' onClick={showButton}>Upload Report Now</button> */}
+                            <FileUpload />
                         </div>
                     </div>
-
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6" style={{ marginTop: "80px" }}>
+                        <ReportGuide />
+                    </div>
                 </div>
-            
+
+            </div>
+
 
 
 
             {/* {show && <div style={{ marginTop: "50px", backgroundColor: "white", paddingTop: "20px", height: "90%" }}><ReportPage /></div>} */}
-
+          
         </div>
+        
     )
 }
 

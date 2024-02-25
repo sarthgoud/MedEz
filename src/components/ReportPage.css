@@ -1,14 +1,4 @@
-input {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    cursor: pointer;
-}
+
 
 .uploadImg{
     width: 70px;
@@ -26,13 +16,13 @@ input {
 }
 
 .feedbackNegativeButton{
-    font-size: 8px;
+    font-size: 10px;
     padding: 5px 5px;
     width: 100%;
 }
 
 .feedbackNegativeText{
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
 }
 

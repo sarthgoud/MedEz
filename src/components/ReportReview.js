@@ -20,7 +20,7 @@ const ReportReview = (props) => {
                         <ReportSummary SummaryHead={"Summary"} SummaryBody={summaryResponse}/>
                     </div>
                     <div class="col-md-4">
-                        {feedback.abnormal_parameters.length >1 ? <ReportFeedbackNegative/> 
+                        {feedback.abnormal_parameters.length >1 ? <ReportFeedbackNegative state = {props.state}/> 
                         : <ReportFeedbackPostive/>}
                     </div>
                     

@@ -66,9 +66,7 @@ const ReportPage = () => {
                 </div>
                 <div className="d-flex">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/testimonials">TESTIMONIALS</a>
-                        </li>
+                       
                         <li className="nav-item">
                             <a className="nav-link" href="/contactus">CONTACT US</a>
                         </li>
@@ -83,11 +81,11 @@ const ReportPage = () => {
                     <ReportPatientDetails data={patient_details}/>
                 </div>
                 <div class="col-md-9">
-                    <ReportReview data = {summary} abnormal={abnormal}/>
+                    <ReportReview data = {summary} abnormal={abnormal} state = {state}/>
                 </div>
             </div>
             {abnormal.length!=0 && <ReportAbnormalParameter data={abnormal}/>}
-            <ReportNormalParameter data={normal}/>
+            {/* {normal!==undefined &&<ReportNormalParameter data={normal}/>} */}
         </div>
         </div>
         </div>

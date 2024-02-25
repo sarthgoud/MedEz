@@ -11,7 +11,7 @@ const ReportPatientDetails = (props) => {
                         <tbody>
                             <tr>
                                 <td>Name:</td>
-                                <td>{data.patient_details.name == undefined ? "N/A" : data.patient_details.name}</td>
+                                <td>{data.patient_details.name == undefined ? "N/A" : data.patient_details.name.split(" ")[0] + " "+ data.patient_details.name.split(" ")[1]}</td>
                             </tr>
                             <tr>
                                 <td>Age:</td>
